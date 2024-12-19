@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="speakers" class="com.itsc.ioc.spring_ioc_lab.model.Speakers" />
+    <bean id="headphones" class="com.itsc.ioc.spring_ioc_lab.model.Headphones" />
+
+
+    <bean id="cdPlayer" class="com.itsc.ioc.spring_ioc_lab.model.CdPlayer">
+        <property name="outputDevice" ref="speakers"/>
+    </bean>
+
+    <bean id="mp3Player" class="com.itsc.ioc.spring_ioc_lab.model.Mp3Player">
+        <property name="outputDevice" ref="headphones"/>
+    </bean>
+
+</beans>
